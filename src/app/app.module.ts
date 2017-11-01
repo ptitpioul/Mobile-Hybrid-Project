@@ -14,8 +14,14 @@ import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 import { SignupPage } from '../pages/signup/signup';
 
 import { StatusBar } from '@ionic-native/status-bar';
+
+
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthProvider } from '../providers/auth/auth';
+import { ConnectivityServiceProvider } from '../providers/connectivity-service/connectivity-service';
+
+import { Geolocation } from '@ionic-native/Geolocation';
+import { Network } from '@ionic-native/network';
 
 @NgModule({
   declarations: [
@@ -46,10 +52,13 @@ import { AuthProvider } from '../providers/auth/auth';
     SignupPage
   ],
   providers: [
+    Network,
+    Geolocation,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthProvider
+    AuthProvider,
+    ConnectivityServiceProvider
   ]
 })
 export class AppModule {}
