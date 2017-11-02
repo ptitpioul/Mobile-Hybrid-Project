@@ -6,12 +6,19 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
+<ion-content padding>
+
+  <div class="gallery-button" text-center>
+    <img [src]="imageSrc" />
+  <ion-icon name="images" on-tap="openGallery()"></ion-icon>
+  <p>Choose a Photo</p>
+</div>
+<!--  <ion-list>
     <ion-list-header>Follow us on Twitter</ion-list-header>
     <ion-item>
       <ion-icon name="ionic" item-start></ion-icon>
       @ionicframework
     </ion-item>
   </ion-list>
+-->
 </ion-content>

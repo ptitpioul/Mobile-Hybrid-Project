@@ -23,6 +23,12 @@ import { ConnectivityServiceProvider } from '../providers/connectivity-service/c
 import { Geolocation } from '@ionic-native/Geolocation';
 import { Network } from '@ionic-native/network';
 
+import { Camera, CameraOptions } from '@ionic-native/camera';
+
+import { ImagePicker } from '@ionic-native/image-picker';
+
+import { AndroidPermissions } from '@ionic-native/android-permissions';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -58,7 +64,10 @@ import { Network } from '@ionic-native/network';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
-    ConnectivityServiceProvider
+    ConnectivityServiceProvider,
+    Camera,
+    ImagePicker,
+    AndroidPermissions
   ]
 })
 export class AppModule {}

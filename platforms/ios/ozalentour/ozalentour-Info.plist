@@ -69,5 +69,7 @@
     <string>CDVLaunchScreen</string>
     <key>NSLocationWhenInUseUsageDescription</key>
     <string>To locate you</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>your usage message</string>
   </dict>
 </plist>

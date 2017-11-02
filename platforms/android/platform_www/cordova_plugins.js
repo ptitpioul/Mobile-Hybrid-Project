@@ -55,6 +55,22 @@ module.exports = [
         "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
         "pluginId": "cordova-plugin-geolocation",
         "runs": true
+    },
+    {
+        "id": "com.synconset.imagepicker.ImagePicker",
+        "file": "plugins/com.synconset.imagepicker/www/imagepicker.js",
+        "pluginId": "com.synconset.imagepicker",
+        "clobbers": [
+            "plugins.imagePicker"
+        ]
+    },
+    {
+        "id": "cordova-plugin-android-permissions.Permissions",
+        "file": "plugins/cordova-plugin-android-permissions/www/permissions.js",
+        "pluginId": "cordova-plugin-android-permissions",
+        "clobbers": [
+            "cordova.plugins.permissions"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -67,7 +83,9 @@ module.exports.metadata =
     "ionic-plugin-keyboard": "2.2.1",
     "cordova-plugin-network-information": "1.3.3",
     "cordova-plugin-compat": "1.2.0",
-    "cordova-plugin-geolocation": "2.4.3"
+    "cordova-plugin-geolocation": "2.4.3",
+    "com.synconset.imagepicker": "2.1.8",
+    "cordova-plugin-android-permissions": "1.0.0"
 };
 // BOTTOM OF METADATA
 });
