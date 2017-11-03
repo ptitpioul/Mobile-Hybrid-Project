@@ -71,6 +71,8 @@
 		7DAD08664A3443AF9D9636BE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60188AA5F8A045709EF0FC20 /* Security.framework */; };
 		78DD9060C1AA4482B2FD5F4E /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF7D5E8646504E1CB11BB48C /* Photos.framework */; };
 		155745D5EB264C348A3AF01B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA37E35B17BC4125B3DC7C38 /* QuartzCore.framework */; };
+		A04714D2E4B8421D834C733C /* AppDelegate+notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 80366EDE02AD41EABC83B39A /* AppDelegate+notification.m */; };
+		7312CFBE5D9D4091BD2705AB /* PushPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D8193D55C4419482A2D4A1 /* PushPlugin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +203,10 @@
 		60188AA5F8A045709EF0FC20 /* Security.framework */ = {isa = PBXFileReference; name = "Security.framework"; path = "System/Library/Frameworks/Security.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		CF7D5E8646504E1CB11BB48C /* Photos.framework */ = {isa = PBXFileReference; name = "Photos.framework"; path = "System/Library/Frameworks/Photos.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		EA37E35B17BC4125B3DC7C38 /* QuartzCore.framework */ = {isa = PBXFileReference; name = "QuartzCore.framework"; path = "System/Library/Frameworks/QuartzCore.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		80366EDE02AD41EABC83B39A /* AppDelegate+notification.m */ = {isa = PBXFileReference; name = "AppDelegate+notification.m"; path = "phonegap-plugin-push/AppDelegate+notification.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		01D8193D55C4419482A2D4A1 /* PushPlugin.m */ = {isa = PBXFileReference; name = "PushPlugin.m"; path = "phonegap-plugin-push/PushPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		082DD75ACA5D4C68A199C585 /* AppDelegate+notification.h */ = {isa = PBXFileReference; name = "AppDelegate+notification.h"; path = "phonegap-plugin-push/AppDelegate+notification.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		C68DB9FB94B4462F9CB72A9F /* PushPlugin.h */ = {isa = PBXFileReference; name = "PushPlugin.h"; path = "phonegap-plugin-push/PushPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -403,6 +409,10 @@
 				7DEE3DA6E32C4919ABAD38C1 /* GMImagePickerController.h */,
 				348439DA9D33464DA61E30B7 /* PSYBlockTimer.h */,
 				05B13E9B9A3342FF88C2DF2D /* GMPHAsset.h */,
+				80366EDE02AD41EABC83B39A /* AppDelegate+notification.m */,
+				01D8193D55C4419482A2D4A1 /* PushPlugin.m */,
+				082DD75ACA5D4C68A199C585 /* AppDelegate+notification.h */,
+				C68DB9FB94B4462F9CB72A9F /* PushPlugin.h */,
 			);
 			name = Plugins;
 			path = "ozalentour/Plugins";
@@ -561,6 +571,8 @@
 				B7BE10C7E7DB4CBF810A01B4 /* GMImagePickerController.m in Sources */,
 				FCECE6FD617A40A09B578CFB /* PSYBlockTimer.m in Sources */,
 				0B2D65733F6E4AA5A325186E /* GMPHAsset.m in Sources */,
+				A04714D2E4B8421D834C733C /* AppDelegate+notification.m in Sources */,
+				7312CFBE5D9D4091BD2705AB /* PushPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

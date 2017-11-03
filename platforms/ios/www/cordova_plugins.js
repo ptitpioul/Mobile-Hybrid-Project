@@ -97,6 +97,14 @@ module.exports = [
         "clobbers": [
             "cordova.plugins.permissions"
         ]
+    },
+    {
+        "id": "phonegap-plugin-push.PushNotification",
+        "file": "plugins/phonegap-plugin-push/www/push.js",
+        "pluginId": "phonegap-plugin-push",
+        "clobbers": [
+            "PushNotification"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -111,7 +119,8 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.3.1",
     "ionic-plugin-keyboard": "2.2.1",
     "com.synconset.imagepicker": "2.1.8",
-    "cordova-plugin-android-permissions": "1.0.0"
+    "cordova-plugin-android-permissions": "1.0.0",
+    "phonegap-plugin-push": "2.0.0"
 };
 // BOTTOM OF METADATA
 });

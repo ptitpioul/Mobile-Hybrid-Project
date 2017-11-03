@@ -71,5 +71,9 @@
     <string>To locate you</string>
     <key>NSPhotoLibraryUsageDescription</key>
     <string>your usage message</string>
+    <key>UIBackgroundModes</key>
+    <array>
+      <string>remote-notification</string>
+    </array>
   </dict>
 </plist>

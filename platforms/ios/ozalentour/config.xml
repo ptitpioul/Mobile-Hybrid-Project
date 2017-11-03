@@ -105,4 +105,7 @@
     <feature name="ImagePicker">
         <param name="ios-package" value="SOSPicker" />
     </feature>
+    <feature name="PushNotification">
+        <param name="ios-package" value="PushPlugin" />
+    </feature>
 </widget>

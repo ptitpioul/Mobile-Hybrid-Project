@@ -6,7 +6,6 @@ import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
-import { TestPage } from '../pages/test/test';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 
@@ -29,13 +28,14 @@ import { ImagePicker } from '@ionic-native/image-picker';
 
 import { AndroidPermissions } from '@ionic-native/android-permissions';
 
+import { Push, PushObject, PushOptions } from '@ionic-native/push';
+
 @NgModule({
   declarations: [
     MyApp,
     AboutPage,
     ContactPage,
     HomePage,
-    TestPage,
     LoginPage,
     TabsPage,
     ResetPasswordPage,
@@ -51,7 +51,6 @@ import { AndroidPermissions } from '@ionic-native/android-permissions';
     AboutPage,
     ContactPage,
     HomePage,
-    TestPage,
     LoginPage,
     TabsPage,
     ResetPasswordPage,
@@ -67,7 +66,8 @@ import { AndroidPermissions } from '@ionic-native/android-permissions';
     ConnectivityServiceProvider,
     Camera,
     ImagePicker,
-    AndroidPermissions
+    AndroidPermissions,
+    Push
   ]
 })
 export class AppModule {}

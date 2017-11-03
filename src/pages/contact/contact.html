@@ -8,17 +8,65 @@
 
 <ion-content padding>
 
+<!--
   <div class="gallery-button" text-center>
     <img [src]="imageSrc" />
-  <ion-icon name="images" on-tap="openGallery()"></ion-icon>
-  <p>Choose a Photo</p>
+ <ion-icon name="images" on-tap="openGallery()"></ion-icon>
+
+<button ion-button block clear (click)="openGallery()">
+  Choose a Photo
+</button>
 </div>
-<!--  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+
+<button ion-button block clear (click)="uploadPictureToFirebase()" *ngIf="imageSrc">
+  Upload to Firebase!
+</button>
+
+
+<button ion-button block clear (click)="logout()">
+  Log out
+</button>
+
 -->
+
+
+<button ion-button block clear (click)="logout()">
+  Log out
+</button>
+
+
+<ion-card text-center>
+
+<img [src]="imageSrc" style="margin: auto; margin-top: 20px;  border-radius: 500px; height:200px; width: 200px; " (click)="openGallery()"/>
+
+	<ion-card-content>
+	<ion-card-title>
+		<!-- {{userDislplayName}} -->
+	</ion-card-title>
+		About me
+	</ion-card-content>
+
+</ion-card>
+
+<ion-card>
+	<ion-card-header text-uppercase>
+		   My details
+	</ion-card-header>
+
+	 <ion-list>
+	 	<button ion-item>
+	 		<ion-icon name="list"> </ion-icon>  27 years old
+	 	</button>
+
+	 	<button ion-item>
+	 		<ion-icon name="logo-buffer"> </ion-icon>
+	 	</button>
+
+	 	<button ion-item>
+	 		<ion-icon name="globe"> </ion-icon> France
+	 	</button>
+	 </ion-list>
+</ion-card>
+
+
 </ion-content>

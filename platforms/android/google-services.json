@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "123678380072",
+    "firebase_url": "https://ozalentour-694b3.firebaseio.com",
+    "project_id": "ozalentour-694b3",
+    "storage_bucket": "ozalentour-694b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123678380072:android:6f333a5780325acf",
+        "android_client_info": {
+          "package_name": "com.ozalentour.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "123678380072-u7troiqmktvt6jjapleujiq4b5mp5rd1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo5IhmNsGXXTOr2m2cqIBXlfzjW5LgEe0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

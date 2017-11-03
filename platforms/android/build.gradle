@@ -21,8 +21,10 @@ apply plugin: 'com.android.application'
 
 buildscript {
     repositories {
-        mavenCentral()
         jcenter()
+        maven {
+            url "https://maven.google.com"
+        }
     }
 
     // Switch the Android Gradle plugin version requirement depending on the
@@ -37,8 +39,10 @@ buildscript {
 // Allow plugins to declare Maven dependencies via build-extras.gradle.
 allprojects {
     repositories {
-        mavenCentral();
         jcenter()
+        maven {
+            url "https://maven.google.com"
+        }
     }
 }
 
@@ -88,8 +92,9 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
-apply from: "com.synconset.imagepicker/starter-ignorelinterrors.gradle"
-apply from: "com.synconset.imagepicker/starter-androidtarget.gradle"
+apply from: "com.synconset.imagepicker/android-ignorelinterrors.gradle"
+apply from: "com.synconset.imagepicker/android-androidtarget.gradle"
+apply from: "phonegap-plugin-push/android-push.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
@@ -252,6 +257,9 @@ dependencies {
     debugCompile(project(path: "CordovaLib", configuration: "debug"))
     releaseCompile(project(path: "CordovaLib", configuration: "release"))
     compile "com.android.support:appcompat-v7:23+"
+    compile "com.android.support:support-v13:25.1.0"
+    compile "me.leolin:ShortcutBadger:1.1.17@aar"
+    compile "com.google.firebase:firebase-messaging:11.0.1"
     // SUB-PROJECT DEPENDENCIES END
 }
 

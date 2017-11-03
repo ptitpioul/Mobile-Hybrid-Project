@@ -11,6 +11,9 @@ import firebase from 'firebase';
 
 import { Events } from 'ionic-angular';
 
+import { Push, PushObject, PushOptions } from '@ionic-native/push';
+import { AlertController } from 'ionic-angular';
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -18,14 +21,15 @@ export class MyApp {
   //rootPage:any = TabsPage;
   rootPage:any;
 
-  constructor(public events: Events, platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
-/*    platform.ready().then(() => {
+  constructor(public alertController: AlertController, public push: Push, public events: Events, platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+    platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
+      this.pushsetup();
     });
-*/
+
 firebase.initializeApp({
 apiKey: "AIzaSyDo5IhmNsGXXTOr2m2cqIBXlfzjW5LgEe0",
 authDomain: "ozalentour-694b3.firebaseio.com",
@@ -50,4 +54,35 @@ messagingSenderId: ""
     */
       }
 
+      pushsetup() {
+         const options: PushOptions = {
+          android: {
+            
+          },
+          ios: {
+              alert: 'true',
+              badge: true,
+              sound: 'false'
+          },
+          windows: {}
+       };
+
+       const pushObject: PushObject = this.push.init(options);
+
+       pushObject.on('notification').subscribe((notification: any) => {
+         if (notification.additionalData.foreground) {
+           let youralert = this.alertController.create({
+             title: 'New Push notification',
+             message: notification.message
+           });
+           youralert.present();
+         }
+       });
+
+       pushObject.on('registration').subscribe((registration: any) => {
+          //do whatever you want with the registration ID
+       });
+
+       pushObject.on('error').subscribe(error => alert('Error with Push plugin' + error));
+       }
 }
