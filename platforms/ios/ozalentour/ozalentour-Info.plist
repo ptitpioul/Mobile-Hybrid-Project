@@ -68,12 +68,14 @@
     <key>UILaunchStoryboardName</key>
     <string>CDVLaunchScreen</string>
     <key>NSLocationWhenInUseUsageDescription</key>
-    <string>To locate you</string>
+    <string/>
     <key>NSPhotoLibraryUsageDescription</key>
-    <string>your usage message</string>
+    <string></string>
     <key>UIBackgroundModes</key>
     <array>
       <string>remote-notification</string>
     </array>
+    <key>NSCameraUsageDescription</key>
+    <string></string>
   </dict>
 </plist>

@@ -57,7 +57,7 @@ messagingSenderId: ""
       pushsetup() {
          const options: PushOptions = {
           android: {
-            
+
           },
           ios: {
               alert: 'true',

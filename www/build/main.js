@@ -357,20 +357,18 @@ var ContactPage = (function () {
             alert.present();
         */
         var cameraOptions = {
-            /*    sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
-                destinationType: this.camera.DestinationType.FILE_URI,
-                quality: 100,
-                targetWidth: 1000,
-                targetHeight: 1000,
-                encodingType: this.camera.EncodingType.JPEG,
-                correctOrientation: true
-          
-                */
+            sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
+            destinationType: this.camera.DestinationType.FILE_URI,
+            quality: 100,
+            targetWidth: 1000,
+            targetHeight: 1000,
+            encodingType: this.camera.EncodingType.JPEG,
+            correctOrientation: true
             //  quality: 100,
             //  destinationType: this.camera.DestinationType.DATA_URL,
             //  encodingType: this.camera.EncodingType.JPEG,
             //  mediaType: this.camera.MediaType.PICTURE,
-            maximumImagesCount: 1
+            //    maximumImagesCount: 1
             /*    quality: 50,
                 destinationType: this.camera.DestinationType.DATA_URL,
                 encodingType: this.camera.EncodingType.JPEG,
@@ -386,7 +384,7 @@ var ContactPage = (function () {
                   // Handle error
                 });
                 */
-        this.androidPermissions.checkPermission(this.androidPermissions.PERMISSION.READ_EXTERNAL_STORAGE).then(function (success) { return _this.imagePicker.getPictures(cameraOptions)
+        this.androidPermissions.checkPermission(this.androidPermissions.PERMISSION.READ_EXTERNAL_STORAGE).then(function (success) { return _this.camera.getPicture(cameraOptions)
             .then(function (file_uri) { return _this.imageSrc = file_uri; }, function (err) { return console.log(err); }); }, function (err) { return _this.androidPermissions.requestPermission(_this.androidPermissions.PERMISSION.READ_EXTERNAL_STORAGE); });
         //  this.uploadPictureToFirebase();
         /* this.imagePicker.getPictures(cameraOptions)
@@ -426,7 +424,7 @@ var ContactPage = (function () {
 }());
 ContactPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-contact',template:/*ion-inline-start:"/Users/pierre/Desktop/Mobile Hybrid Project/src/pages/contact/contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n<!--\n  <div class="gallery-button" text-center>\n    <img [src]="imageSrc" />\n <ion-icon name="images" on-tap="openGallery()"></ion-icon>\n\n<button ion-button block clear (click)="openGallery()">\n  Choose a Photo\n</button>\n</div>\n\n<button ion-button block clear (click)="uploadPictureToFirebase()" *ngIf="imageSrc">\n  Upload to Firebase!\n</button>\n\n\n<button ion-button block clear (click)="logout()">\n  Log out\n</button>\n\n-->\n\n\n<button ion-button block clear (click)="logout()">\n  Log out\n</button>\n\n\n<ion-card text-center>\n\n<img [src]="imageSrc" style="margin: auto; margin-top: 20px;  border-radius: 500px; height:200px; width: 200px; " (click)="openGallery()"/>\n\n	<ion-card-content>\n	<ion-card-title>\n		<!-- {{userDislplayName}} -->\n	</ion-card-title>\n		About me\n	</ion-card-content>\n\n</ion-card>\n\n<ion-card>\n	<ion-card-header text-uppercase>\n		   My details\n	</ion-card-header>\n\n	 <ion-list>\n	 	<button ion-item>\n	 		<ion-icon name="list"> </ion-icon>  27 years old\n	 	</button>\n\n	 	<button ion-item>\n	 		<ion-icon name="logo-buffer"> </ion-icon>\n	 	</button>\n\n	 	<button ion-item>\n	 		<ion-icon name="globe"> </ion-icon> France\n	 	</button>\n	 </ion-list>\n</ion-card>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/pierre/Desktop/Mobile Hybrid Project/src/pages/contact/contact.html"*/
+        selector: 'page-contact',template:/*ion-inline-start:"/Users/pierre/Desktop/Mobile Hybrid Project/src/pages/contact/contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n<!--\n  <div class="gallery-button" text-center>\n    <img [src]="imageSrc" />\n <ion-icon name="images" on-tap="openGallery()"></ion-icon>\n\n<button ion-button block clear (click)="openGallery()">\n  Choose a Photo\n</button>\n</div>\n\n<button ion-button block clear (click)="uploadPictureToFirebase()" *ngIf="imageSrc">\n  Upload to Firebase!\n</button>\n\n\n<button ion-button block clear (click)="logout()">\n  Log out\n</button>\n\n-->\n\n\n<button ion-button block clear (click)="logout()">\n  Log out\n</button>\n\n\n<ion-card text-center>\n\n<img [src]="imageSrc" style="margin: auto; margin-top: 20px;  border-radius: 500px; height:200px; width: 200px; " (click)="openGallery()"/>\n\n<!--<ion-img style="margin: auto; margin-top: 20px;  border-radius: 500px; height:200px; width: 200px; " (click)="openGallery()" [src]="imageSrc"></ion-img> -->\n	<ion-card-content>\n	<ion-card-title>\n		<!-- {{userDislplayName}} -->\n    <button ion-button block clear (click)="uploadPictureToFirebase()" *ngIf="imageSrc">\n      Upload to Firebase!\n    </button>\n\n	</ion-card-title>\n\n	</ion-card-content>\n\n</ion-card>\n\n<ion-card>\n	<ion-card-header text-uppercase>\n		   My details\n	</ion-card-header>\n\n	 <ion-list>\n	 	<button ion-item>\n	 		<ion-icon name="list"> </ion-icon>  27 years old\n	 	</button>\n\n	 	<button ion-item>\n	 		<ion-icon name="logo-buffer"> </ion-icon>\n	 	</button>\n\n	 	<button ion-item>\n	 		<ion-icon name="globe"> </ion-icon> France\n	 	</button>\n	 </ion-list>\n</ion-card>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/pierre/Desktop/Mobile Hybrid Project/src/pages/contact/contact.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_6__providers_auth_auth__["a" /* AuthProvider */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_image_picker__["a" /* ImagePicker */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_android_permissions__["a" /* AndroidPermissions */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]])

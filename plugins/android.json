@@ -36,6 +36,9 @@
     },
     "phonegap-plugin-push": {
       "PACKAGE_NAME": "com.ozalentour.android"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.ozalentour.android"
     }
   },
   "dependent_plugins": {}

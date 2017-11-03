@@ -39,11 +39,16 @@
 
 <img [src]="imageSrc" style="margin: auto; margin-top: 20px;  border-radius: 500px; height:200px; width: 200px; " (click)="openGallery()"/>
 
+<!--<ion-img style="margin: auto; margin-top: 20px;  border-radius: 500px; height:200px; width: 200px; " (click)="openGallery()" [src]="imageSrc"></ion-img> -->
 	<ion-card-content>
 	<ion-card-title>
 		<!-- {{userDislplayName}} -->
+    <button ion-button block clear (click)="uploadPictureToFirebase()" *ngIf="imageSrc">
+      Upload to Firebase!
+    </button>
+
 	</ion-card-title>
-		About me
+
 	</ion-card-content>
 
 </ion-card>

@@ -47,7 +47,7 @@ public loading: Loading;
     alert.present();
 */
     let cameraOptions = {
-  /*    sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
+     sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
       destinationType: this.camera.DestinationType.FILE_URI,
       quality: 100,
       targetWidth: 1000,
@@ -55,12 +55,12 @@ public loading: Loading;
       encodingType: this.camera.EncodingType.JPEG,
       correctOrientation: true
 
-      */
+
     //  quality: 100,
     //  destinationType: this.camera.DestinationType.DATA_URL,
     //  encodingType: this.camera.EncodingType.JPEG,
     //  mediaType: this.camera.MediaType.PICTURE,
-      maximumImagesCount: 1
+  //    maximumImagesCount: 1
 
 
   /*    quality: 50,
@@ -80,7 +80,7 @@ public loading: Loading;
         });
         */
   this.androidPermissions.checkPermission(this.androidPermissions.PERMISSION.READ_EXTERNAL_STORAGE).then(
-      success => this.imagePicker.getPictures(cameraOptions)
+      success => this.camera.getPicture(cameraOptions)
         .then(file_uri => this.imageSrc = file_uri,
         err => console.log(err)),
       err => this.androidPermissions.requestPermission(this.androidPermissions.PERMISSION.READ_EXTERNAL_STORAGE)
